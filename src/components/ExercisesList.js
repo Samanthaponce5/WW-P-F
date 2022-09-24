@@ -33,7 +33,7 @@ function ExercisesList() {
             setExercises(resp.data)
         })
         .catch((err)=>console.log('Error: ' + err))
-    },[])
+    },[exercises])
 
     const deleteExercise = (id) => {
         axios.delete(`http://localhost:3001/exercises/${id}`)
